@@ -62,7 +62,6 @@ public class Picture
         field.moveVertical(150);
         field.changeSize(1000);
         field.makeVisible();
-        sun.slowMoveVertical(150);
        
     }
 
@@ -91,6 +90,17 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+        }
+    }
+    
+    /**
+     * Move sun slowly down
+     */
+    public void moveSun()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+            sun.slowMoveVertical(150);
         }
     }
 }
