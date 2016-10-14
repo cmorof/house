@@ -16,6 +16,8 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle field;
+    private Person person;
+    
 
     /**
      * Constructor for objects of class Picture
@@ -106,6 +108,24 @@ public class Picture
             roof.changeColor("black");
             sun.changeColor("black");
             field.changeColor("black");
+        }
+    }
+    
+    /**
+     * Create a person
+     */
+    public void createPerson()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+            person = new Person();
+            person.moveHorizontal(-190);
+            person.moveVertical(60);
+            person.changeSize(90,40);
+            person.makeVisible();
+            
+            person.slowMoveHorizontal(50);
+            person.slowMoveVertical(-30);
         }
     }
 }
